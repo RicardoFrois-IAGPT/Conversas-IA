@@ -1,0 +1,57 @@
+﻿## Lembretes para Retomada do Projeto - Banco de Dados de Conversas
+
+### **1. Objetivo do Projeto:**
+Criar um banco de dados para armazenar conversas de múltiplos chats, permitindo acesso randômico a trechos específicos sem depender da continuidade da sessão. O foco é garantir a recuperação do contexto de qualquer conversa anterior.
+
+### **2. Estrutura do Banco de Dados (chat.db):**
+- O banco de dados SQLite `chat.db` está criado no diretório do projeto.
+- Tabelas criadas:
+  - `Chat`: Identifica cada sessão de conversa.
+  - `Categoria`: Classifica tópicos das conversas.
+  - `Topico`: Define os temas abordados nos chats.
+  - `Chat_Topico`: Relaciona chats e tópicos.
+  - `Mensagem`: Armazena as mensagens trocadas.
+  - `Topico_Categoria`: Relaciona tópicos às categorias.
+- Índices criados: `idx_chat_nome`, `idx_topico_titulo` e `idx_mensagem_conteudo`.
+- Tabela virtual `MensagemFTS` para busca full-text.
+- View `vw_ConversaCompleta` para visualização integrada das conversas.
+
+### **3. Arquivos Essenciais:**
+- `Criar_Bd_Chat.sql`: Script para criar as tabelas no SQLite.
+- `executar_db_chat.py`: Executa o script SQL e cria o banco.
+- `popular_bd_chat.py`: Popula as tabelas com base nas conversas.
+- `conversas_exemplo.txt`: Arquivo de entrada das conversas no formato:
+  ```
+  NomeChat|TituloTopico|ConteudoMensagem|2025-02-20 22:30:00
+  ```
+- `lembretes_retomada.txt`: Este arquivo, para garantir a continuidade do contexto.
+
+### **4. Fluxo de Execução:**
+1. Executar `executar_db_chat.py` para garantir que o banco está criado.
+2. Verificar o arquivo `conversas_exemplo.txt` com as conversas formatadas.
+3. Executar `popular_bd_chat.py` para alimentar o banco.
+4. Visualizar os dados no DB Browser for SQLite.
+
+### **5. Próximos Passos:**
+- Refinar a importação para considerar mais detalhes das conversas.
+- Implementar rotinas de backup automático do banco.
+- Criar scripts de exportação em formatos CSV/Excel.
+- Desenvolver consultas para acesso randômico ao contexto das conversas.
+
+### **6. Comandos Úteis:**
+- Listar tabelas no SQLite (via terminal):
+```bash
+sqlite3 chat.db
+.tables
+```
+- Visualizar estrutura das tabelas:
+```bash
+.schema
+```
+- Consultar mensagens:
+```sql
+SELECT * FROM Mensagem LIMIT 10;
+```
+
+**💡 Importante:** Este documento foi criado para facilitar a retomada do projeto sem perda de contexto. Salve-o no diretório do projeto. Qualquer dúvida, podemos ajustar conforme a necessidade.
+
