@@ -1,0 +1,22 @@
+📜 Lembrete do Contexto - 21/02/2025
+
+1. Renomeação e Organização do Projeto:
+- O projeto foi renomeado para Conversas-IA.
+- Estrutura de diretórios ajustada e scripts organizados em pastas específicas.
+
+2. Criação e Ajuste de Scripts:
+- Recriamos o executar_db_chat.py após perda acidental.
+- Criamos organizar_arquivos.py para organizar automaticamente os arquivos.
+- Criamos backup_db.py para backup automático do banco chat.db.
+- Testamos todos os scripts e confirmamos seu funcionamento.
+
+3. Integração com GitHub:
+- Corrigimos o link remoto após a renomeação do repositório.
+- Sincronização testada e bem-sucedida.
+
+4. Roteiro de Execução:
+- Criamos o arquivo roteiro_execucao.txt na pasta Documentação para guiar o uso dos scripts.
+
+💾 Próximos Passos:
+1. Consolidar os scripts em um único orquestrador, quando estivermos em um ponto estável.
+2. Explorar perfis personalizados de terminal no VS Code (se necessário).

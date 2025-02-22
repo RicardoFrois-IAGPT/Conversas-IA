@@ -1,0 +1,21 @@
+📜 Roteiro de Execução de Scripts - Projeto Conversas-IA
+
+1. Organização do Projeto
+- Objetivo: Mover arquivos para as pastas corretas.
+- Comando:
+python Scripts/organizar_arquivos.py
+
+2. Backup do Banco de Dados
+- Objetivo: Criar uma cópia de segurança do banco chat.db.
+- Comando:
+python Scripts/backup_db.py
+
+3. Criação/Recriação do Banco de Dados
+- Objetivo: Executar o script SQL para criar as tabelas.
+- Comando:
+python Scripts/executar_db_chat.py
+
+4. Sincronização com o GitHub
+- Objetivo: Enviar mudanças para o repositório remoto.
+- Comando:
+python Scripts/git_automatizar_backup.py
